@@ -10,6 +10,9 @@ export type Post = {
   featured: boolean;
 };
 
+// Intersection Type
+export type PostData = Post & { content: string };
+
 // ✨비즈니스 로직을 따로 함수로 사용하면 좋은 점.!!
 // getAllPosts() : 비동기 함수
 //  - Post데이터의 배열을 반환하는 Promise를 리턴.
@@ -44,4 +47,15 @@ export async function getAllPosts(): Promise<Post[]> {
       // 5. 최신 데이터로 정렬
       .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)))
   );
+}
+
+export async function getPostData(fileName: string): Promise<PostData> {
+  const filePath = path.join(process.cwd(), "data", "posts", `${fileName}.md`);
+  const metadata = await getAllPosts() //
+    .then((posts) => posts.find((post) => post.path === fileName));
+  if (!metadata)
+    throw new Error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
+
+  const content = await readFile(filePath, "utf-8");
+  return { ...metadata, content };
 }
