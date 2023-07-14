@@ -1,5 +1,6 @@
 import { readFile } from "fs/promises";
 import path from "path";
+import { cache } from "react";
 
 export type Post = {
   title: string;
@@ -35,7 +36,10 @@ export async function getNonFeaturedPosts(): Promise<Post[]> {
     .then((posts) => posts.filter((post) => !post.featured));
 }
 
-export async function getAllPosts(): Promise<Post[]> {
+// cache : 호출하는 인자가 동일하다면 cache된 값을 반환하기 때문에 여러번 서버와 통신하지 않는다.
+// 단, 한번의 렌더링에 한해서 제한된다. 
+//  => 한 페이지에서 여러개의 컴포넌트에서 동일한 인자로 호출할 때 적용됨.
+export const getAllPosts = cache(async () => {
   // 1. file 경로 설정
   const filePath = path.join(process.cwd(), "data", "posts.json");
   // 2. promises를 반환하는 readFile 사용.
@@ -51,7 +55,7 @@ export async function getAllPosts(): Promise<Post[]> {
       // 5. 최신 데이터로 정렬
       .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)))
   );
-}
+});
 
 export async function getPostData(fileName: string): Promise<PostData> {
   const filePath = path.join(process.cwd(), "data", "posts", `${fileName}.md`);
@@ -64,7 +68,7 @@ export async function getPostData(fileName: string): Promise<PostData> {
   const index = posts.indexOf(post);
   const next = index > 0 ? posts[index - 1] : null;
   // 이전 post가 있다면 ? 이전 post 노출, 없다면 null
-  const prev = index < posts.length -1 ? posts[index + 1] : null; 
+  const prev = index < posts.length - 1 ? posts[index + 1] : null;
   const content = await readFile(filePath, "utf-8");
 
   return { ...post, content, next, prev };
