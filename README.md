@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 프로젝트 소개
+- 정적인 웹사이트.
+- Next.js 입문용 포트폴리오.
 
-## Getting Started
 
-First, run the development server:
+## ⚙️🚩개발 환경
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- `TypeScript`
+- `Next.js`
+- `Tailwind CSS`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Library
+- [nodemailer](https://nodemailer.com/about/)
+- [yup](https://github.com/jquense/yup)
+- [markdown](https://github.com/remarkjs/react-markdown)
+- [carousel](https://github.com/YIZHUANG/react-multi-carousel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📌주요 기능
+#### Home
+- 로고
+   - 클릭 시, home으로 이동
+- 나를 소개하는 컴포넌트
+- 포스트 중에서 홈페이지에 보여주고 싶은 포스트만 노출
+   - 선택 시, 해당 포스트로 이동.
+- 포스트 중에서 featured posts를 제외한 모든 포스트 노출.
+   - carousel 라이브러리 사용.
+ 
+#### About
+- 간략한 소개 내용.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Contact
+- 소셜 링크
+- 실제 이메일 전송 기능.
+   - nodemailer, yup 라이브러리 사용. 
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Posts
+- post 전부 카테고리 형태로 나열.
+- 카테고리 별 포스트 필터링.
+   - markdown 라이브러리 사용.
+- 이전 포스트와 다음 포스트로 이동할 수 있는 링크 제공.
