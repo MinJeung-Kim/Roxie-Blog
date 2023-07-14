@@ -1,12 +1,19 @@
 import ContactForm from "@/components/ContactForm";
+import { Metadata } from "next";
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 
+export const metadata: Metadata = {
+  title: "Contact Me",
+  description: "Roxie에게 메일 보내기",
+};
+
+const LINKS = [
+  { icon: <AiFillGithub />, url: "https://github.com/MinJeung-Kim" },
+  { icon: <AiFillLinkedin />, url: "" },
+  { icon: <AiFillYoutube />, url: "" },
+];
+
 export default function ContactPage() {
-  const LINKS = [
-    { icon: <AiFillGithub />, url: "https://github.com/MinJeung-Kim" },
-    { icon: <AiFillLinkedin />, url: "" },
-    { icon: <AiFillYoutube />, url: "" },
-  ];
   return (
     <section className="flex flex-col items-center">
       <h2 className="text-3xl font-bold my-2">Contact ME</h2>

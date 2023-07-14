@@ -1,6 +1,13 @@
 import Hero from "@/components/Hero";
+import { Metadata } from "next";
 
-const TITLE_CLASS = "text-2xl font-bold text-gray-800 my-2"
+export const metadata: Metadata = {
+  title: "About Me",
+  description: "Roxie 커리어 소개",
+};
+
+const TITLE_CLASS = "text-2xl font-bold text-gray-800 my-2";
+
 export default function AboutPage() {
   return (
     <>
