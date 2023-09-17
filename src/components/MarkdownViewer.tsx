@@ -3,7 +3,7 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Image from "next/image";
 
 export default function MarkdownViewer({ content }: { content: string }) {
@@ -19,7 +19,10 @@ export default function MarkdownViewer({ content }: { content: string }) {
               language={match[1]}
               PreTag="div"
               {...props}
-              style={materialDark}
+              style={coldarkDark}
+              customStyle={{
+                background: undefined,
+              }}
             >
               {String(children).replace(/\n$/, "")}
             </SyntaxHighlighter>
@@ -30,7 +33,8 @@ export default function MarkdownViewer({ content }: { content: string }) {
           );
         },
         img: (image) => (
-          <Image className="w-full max-h-60 object-cover"
+          <Image
+            className="w-full max-h-60 object-cover"
             src={image.src || ""}
             alt={image.alt || ""}
             width={500}
