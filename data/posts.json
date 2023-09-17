@@ -1,5 +1,13 @@
 [
   {
+    "title": "object 타입 동적 업데이트",
+    "description": "현업에서 사용하는 object 타입 동적 업데이트",
+    "date": "2023-09-17",
+    "category": "react",
+    "path": "useState-object-type-update",
+    "featured": true
+  },
+  {
     "title": "2021년 리뷰",
     "description": "2021년 한해 동안 배운 기술들, 생각들 정리",
     "date": "2021-12-31",
