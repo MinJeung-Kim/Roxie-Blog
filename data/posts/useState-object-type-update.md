@@ -58,7 +58,19 @@ export const Inputs: React.FC<Props> = ({ name, data }) => {
 
 동적 input를 사용하면 곤란한 상황들이 발생한다.  
 `onChange()`에 `console.log`를 찍으면 `input`에 적을때마다 `console.log`가 찍히는 문제이다.  
- 이 문제는 `use-debounce`를 사용하여 해결해 보도록 한다.
+ 이 문제는 `debounce`를 사용하여 해결해 보도록 한다.
 
- 참고: [Debounce Input in React](https://dev.to/manishkc104/debounce-input-in-react-3726)
+```tsx 
+  useEffect(() => {
+    const debounce = setTimeout(() => {
+      console.log('디바운스 입력:', inputs);
+    }, 1000);
+    return () => clearTimeout(debounce);
+  }, [inputs]); 
+
+```
+
+참고:  
+[Debounce Input in React](https://dev.to/manishkc104/debounce-input-in-react-3726)  
+[Debounce&Throttle](https://velog.io/@skawnkk/debounce-throttle)
 
