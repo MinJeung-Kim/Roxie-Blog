@@ -1,7 +1,7 @@
 [
   {
-    "title": "시각화 Hook 만들기",
-    "description": "라이브러리를 사용한 시각화 구현",
+    "title": "시각화 만들기",
+    "description": "ReactFlow를 사용한 시각화 구현",
     "date": "2023-09-18",
     "category": "react",
     "path": "visualization",
@@ -13,7 +13,7 @@
     "date": "2023-09-17",
     "category": "my story",
     "path": "mandalart-plan",
-    "featured": true
+    "featured": false
   },
   {
     "title": "object 타입 동적 업데이트",
