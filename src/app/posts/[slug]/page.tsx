@@ -25,7 +25,7 @@ export default async function PostPage({ params: { slug } }: Props) {
   const { title, path, next, prev } = post;
 
   return (
-    <article className="rounded-2xl overflow-hidden bg-gray-100 shadow-lg m-4">
+    <article className="m-4 overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
       {/* h-1/5 : 화면의 5분의1 */}
       <Image
         className="w-full h-1/5 max-h-[500px]"
@@ -35,7 +35,7 @@ export default async function PostPage({ params: { slug } }: Props) {
         height={420}
       />
       <PostContent post={post} />
-      <section className="flex shadow-md">
+      <section className="flex shadow-md mt-[2rem]">
         {prev && <AdjacentPostCard post={prev} type="prev" />}
         {next && <AdjacentPostCard post={next} type="next" />}
       </section>
