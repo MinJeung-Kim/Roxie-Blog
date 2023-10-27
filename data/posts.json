@@ -16,7 +16,7 @@
     "featured": true
   },
   {
-    "title": "object 타입 동적 업데이트",
+    "title": "input object 타입 동적 업데이트",
     "description": "현업에서 사용하는 object 타입 동적 업데이트",
     "date": "2023-09-17",
     "category": "react",
@@ -29,6 +29,22 @@
     "date": "2023-10-25",
     "category": "react",
     "path": "chatGPT-openAI",
+    "featured": true
+  },
+  {
+    "title": "(CI/CD)Github 작업을 사용하여 AWS s3에 React 배포하기(1)",
+    "description": "AWS s3 버킷 생성",
+    "date": "2023-10-26",
+    "category": "AWS 배포",
+    "path": "deploy-reactapp-1",
+    "featured": true
+  },
+  {
+    "title": "(CI/CD)Github 작업을 사용하여 AWS s3에 React 배포하기(2)",
+    "description": "Github Action 설정",
+    "date": "2023-10-26",
+    "category": "AWS 배포",
+    "path": "deploy-reactapp-2",
     "featured": true
   },
   {

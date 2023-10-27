@@ -57,7 +57,7 @@ export const Inputs: React.FC<Props> = ({ name, data }) => {
 ## Perplexing
 
 동적 input를 사용하면 곤란한 상황들이 발생한다.  
-`onChange()`에 `console.log`를 찍으면 `input`에 적을때마다 `console.log`가 찍히는 문제이다.  
+`onChange()`에 `console.log`를 찍으면 `input`에 글을 쓰는 순간 그 즉시 `console.log`가 찍히는 문제이다.  
  이 문제는 `debounce`를 사용하여 해결해 보도록 한다.
 
 ```tsx 
@@ -68,7 +68,8 @@ export const Inputs: React.FC<Props> = ({ name, data }) => {
     return () => clearTimeout(debounce);
   }, [inputs]); 
 
-```
+```  
+이렇게하면 1초뒤, console.log가 찍히는 것을 확인 할 수 있다.
 
 참고:  
 [Debounce Input in React](https://dev.to/manishkc104/debounce-input-in-react-3726)  
