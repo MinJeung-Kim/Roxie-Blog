@@ -10,6 +10,7 @@ export default async function FeaturedPosts() {
   return (
     <section className="px-12 py-4 mt-4">
       <h2 className="my-2 text-3xl font-medium">최신 글 🌟</h2>
+      <p className="text-[#706f7a] mb-8">최근 공부한 내용을 정리합니다.</p>
       <PostsGrid posts={posts} />
     </section>
   );

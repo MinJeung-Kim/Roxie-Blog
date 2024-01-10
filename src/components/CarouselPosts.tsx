@@ -7,6 +7,9 @@ export default async function CarouselPosts() {
   return (
     <section className="px-12 py-4 mt-4">
       <h2 className="my-2 text-3xl font-medium">추천 글💡</h2>
+      <p className="text-[#706f7a] mb-8">
+        최신 트렌드에 연관된 글을 추천합니다.
+      </p>
       <MultiCarousel>
         {posts.map((post) => (
           <PostCard key={post.path} post={post} />

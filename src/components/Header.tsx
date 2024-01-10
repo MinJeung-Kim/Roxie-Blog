@@ -5,7 +5,7 @@ import profileImage from "../../public/images/profile.png";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between w-full px-12 py-4 mx-auto max-w-screen-2xl">
+    <header className="fixed flex items-center justify-between w-full px-12 py-4 mx-auto z-999 max-w-screen-2xl">
       <nav className="flex gap-4">
         <Link href="/about">About</Link>
         <Link href="/posts">Posts</Link>
@@ -14,7 +14,7 @@ export default function Header() {
       <Link href="/">
         <h1 className="text-2xl">{"Roxie's Blog"}</h1>
       </Link>
-      <div className="flex items-center gap-[0.8rem]">
+      <div className="flex items-center gap-4">
         <Image
           className="mx-auto rounded-full cursor-pointer"
           src={profileImage}
