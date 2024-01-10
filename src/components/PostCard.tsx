@@ -9,7 +9,7 @@ export default function PostCard({
 }: Props) {
   return (
     <Link href={`/posts/${path}`}>
-      <article className="rounded-md overflow-hidden shadow-md hover:shadow-xl">
+      <article className="overflow-hidden rounded-md shadow-md hover:shadow-xl">
         <Image
           className="w-full"
           src={`/images/posts/${path}.png`}
@@ -18,13 +18,19 @@ export default function PostCard({
           height={200}
         />
         <div className="flex flex-col items-center p-4">
-          <time className="self-end text-gray-700">{date.toString()}</time>
-          <h3 className="text-lg font-bold">{title}</h3>
+          <div className="flex items-center justify-between w-full">
+            <span className="px-2 py-[0.15rem] my-2 text-[0.8rem] text-white bg-[#FF6666] rounded-xl">
+              ɷ {category}
+            </span>
+            <time className="text-gray-500 text-[0.85rem]">
+              {date.toString()}
+            </time>
+          </div>
+          <h3 className="text-base mb-[0.5rem]">{title}</h3>
           {/* truncate  : 일정한 높이 지정*/}
-          <p className="w-full truncate text-center">{description}</p>
-          <span className="text-sm rounded-lg bg-green-100 px-2 my-2">
-            {category}
-          </span>
+          <p className="w-full text-[0.85rem] text-[#898888] text-center truncate">
+            {description}
+          </p>
         </div>
       </article>
     </Link>

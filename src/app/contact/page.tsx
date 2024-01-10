@@ -1,6 +1,8 @@
-import ContactForm from "@/components/ContactForm";
 import { Metadata } from "next";
-import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
+import ContactForm from "@/components/ContactForm";
+import GithubFillIcon from "@/components/icons/GithubFillIcon";
+import YoutubeFillIcon from "@/components/icons/YoutubeFillIcon";
+import InstagramFillIcon from "@/components/icons/InstagramFillIcon";
 
 export const metadata: Metadata = {
   title: "Contact Me",
@@ -8,15 +10,15 @@ export const metadata: Metadata = {
 };
 
 const LINKS = [
-  { icon: <AiFillGithub />, url: "https://github.com/MinJeung-Kim" },
-  { icon: <AiFillLinkedin />, url: "" },
-  { icon: <AiFillYoutube />, url: "" },
+  { icon: <GithubFillIcon />, url: "https://github.com/MinJeung-Kim" },
+  { icon: <InstagramFillIcon />, url: "" },
+  { icon: <YoutubeFillIcon />, url: "" },
 ];
 
 export default function ContactPage() {
   return (
     <section className="flex flex-col items-center">
-      <h2 className="text-3xl font-bold my-2">Contact ME</h2>
+      <h2 className="my-2 text-3xl font-bold">Contact ME</h2>
       <p>focso5@gmail.com</p>
       <ul className="flex gap-4 my-2">
         {LINKS.map((link, index) => (
@@ -31,7 +33,7 @@ export default function ContactPage() {
           </a>
         ))}
       </ul>
-      <h2 className="text-3xl font-bold my-8">Or Send mean email</h2>
+      <h2 className="my-8 text-3xl font-bold">Or Send mean email</h2>
       <ContactForm />
     </section>
   );

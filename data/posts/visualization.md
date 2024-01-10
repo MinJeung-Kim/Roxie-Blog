@@ -12,7 +12,7 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 
-<ReactFlow 
+<ReactFlow
   nodes={nodes}
   edges={edges}
   nodeTypes={nodeTypes}
@@ -36,15 +36,15 @@ import "reactflow/dist/style.css";
     <Controls />
   </Panel>
 </ReactFlow>;
-``` 
+```
 
 `nodeTypes`는 `custom`타입으로 원하는 UI로 template를 만들 수 있다.
+
 ```
 const nodeTypes = {
   custom: CustomLayout,
 };
 ```
-
 
 ```tsx
 const CustomNode: React.FC<IProps> = ({ data }) => {
@@ -79,9 +79,9 @@ export const CustomLayout = memo(CustomNode);
 
 node를 클릭하면 하이라이팅 되는 기능은 git에 공유된 코드를 참고했다.
 
->[Highlight path of selected node?](https://github.com/wbkd/react-flow/issues/984)
+> [Highlight path of selected node?](https://github.com/wbkd/react-flow/issues/984)
 
-제일 어려웠던 부분은 `Auto layout` 부분이였는데 수시간의 삽질을 통해 많은 참고 자료를 
+제일 어려웠던 부분은 `Auto layout` 부분이였는데 수시간의 삽질을 통해 많은 참고 자료를
 얻을 수 있었었다.  
 확실히 [d3.js](https://d3js.org/)로 구현한다면 더 다양한 효과와 기능을 추가 할 수 있을 것이다.
 
