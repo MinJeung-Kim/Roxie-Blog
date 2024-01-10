@@ -26,11 +26,13 @@ export default function RootLayout({
       lang="en"
       // className={sans.className}
     >
-      <body className="flex flex-col w-full">
+      <body className="relative flex flex-col justify-between w-full h-screen">
         <Header />
         {/* grow : 부모컨테이너를 가득 채움. */}
-        <main className="w-full mx-auto grow max-w-screen-2xl">{children}</main>
-        <Footer />
+        <main className="w-full h-full mx-auto grow max-w-screen-2xl">
+          {children}
+        </main>
+        {/* <Footer /> */}
       </body>
     </html>
   );

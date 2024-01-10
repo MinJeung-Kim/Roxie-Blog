@@ -4,10 +4,12 @@ import Main from "@/components/Main";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="relative">
       <Main />
-      <FeaturedPosts />
-      <CarouselPosts />
-    </>
+      <div className="absolute top-2/3">
+        <FeaturedPosts />
+        <CarouselPosts />
+      </div>
+    </div>
   );
 }

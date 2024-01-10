@@ -8,7 +8,7 @@ export default async function FeaturedPosts() {
   const posts = await getFeaturedPosts();
   // 2. 모든 포스트 데이터를 보여줌.
   return (
-    <section className="px-12 py-4 mt-4">
+    <section className="px-12 bg-white py-4 mt-4 rounded-tl-[3rem] rounded-tr-[3rem] shadow-custom">
       <h2 className="my-2 text-3xl font-medium">최신 글 🌟</h2>
       <p className="text-[#706f7a] mb-8">최근 공부한 내용을 정리합니다.</p>
       <PostsGrid posts={posts} />

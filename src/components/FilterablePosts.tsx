@@ -20,7 +20,7 @@ export default function FilterablePosts({ posts, categories }: Props) {
       ? posts
       : posts.filter((post) => post.category === selected);
   return (
-    <section className="flex m-4">
+    <section className="flex m-4 mt-[5rem]">
       <PostsGrid posts={filtered} />
       <Categories
         categories={[ALL_POSTS, ...categories]}

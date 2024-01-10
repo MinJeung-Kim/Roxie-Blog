@@ -17,7 +17,7 @@ const LINKS = [
 
 export default function ContactPage() {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center mt-[5rem]">
       <h2 className="my-2 text-3xl font-bold">Contact ME</h2>
       <p>focso5@gmail.com</p>
       <ul className="flex gap-4 my-2">

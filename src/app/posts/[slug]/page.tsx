@@ -25,7 +25,7 @@ export default async function PostPage({ params: { slug } }: Props) {
   const { title, path, next, prev } = post;
 
   return (
-    <article className="m-12 overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
+    <article className="m-12 mt-[5rem] overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
       {/* h-1/5 : 화면의 5분의1 */}
       <Image
         className="w-full h-1/5 max-h-[500px]"

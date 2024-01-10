@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import { Metadata } from "next";
 import Link from "next/link";
-import { FiExternalLink } from 'react-icons/fi';
+import { FiExternalLink } from "react-icons/fi";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -12,9 +12,9 @@ const TITLE_CLASS = "text-2xl font-bold text-gray-800 my-2";
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="mt-[5rem]">
       <Hero />
-      <section className="bg-gray-100 shadow-lg p-8 m-8 text-center">
+      <section className="p-8 m-8 text-center bg-gray-100 shadow-lg">
         <h2 className={TITLE_CLASS}>🙋‍♀️Who Am I?</h2>
         <p>
           개발을 사랑하는 프론트 개발자 <br />
@@ -36,9 +36,12 @@ export default function AboutPage() {
         </p>
         <h2 className={TITLE_CLASS}>📃Cover Letter</h2>
         <Link href="https://www.notion.so/roxiedev/Cover-Letter-b9deac9efa294d2ca1596dbd07c05dd4?pvs=4">
-          <p className="flex items-center justify-center underline text-sky-600">바로가기<FiExternalLink/></p>
+          <p className="flex items-center justify-center underline text-sky-600">
+            바로가기
+            <FiExternalLink />
+          </p>
         </Link>
       </section>
-    </>
+    </div>
   );
 }
