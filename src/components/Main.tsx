@@ -14,46 +14,32 @@ export default function Main() {
         //   height={30}
         priority
       />
-      <div className="absolute top-80 left-1/4 text-[#fcfc2d] text-[5rem]">
+      <div className="absolute top-80 left-[18%] text-[#fcfc2d] text-[5rem]">
         <TypeIt
           getBeforeInit={(instance) => {
-            instance
-              .type("interactive")
-              .pause(600)
-              .delete(11)
-              .type("bespoke")
-              .pause(600)
-              .delete(7)
-              .type("accessible")
-              .pause(600)
-              .delete(11)
-              .type("reactive")
-              .pause(600)
-              .delete(8)
-              .type("engaging")
-              .pause(600)
-              .delete(8)
-              .type("intentional")
-              .pause(600)
-              .delete(11)
-              .type("fun")
-              .pause(600)
-              .delete(3)
-              .type("lovely")
-              .pause(600)
-              .delete(6)
-              .pause(600)
-              .type("interactive");
+            instance.go();
             // Remember to return it!
             return instance;
           }}
           options={{
-            cursor: false,
-            waitUntilVisible: true,
+            strings: "Fake it till you make it.",
             loop: true,
+            breakLines: false,
+            afterStep: (instance: any) => {
+              instance.getElement().style.color = randomColor();
+            },
           }}
         ></TypeIt>
       </div>
     </div>
   );
+}
+function randomColor() {
+  // 간단한 색상 코드 생성
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
