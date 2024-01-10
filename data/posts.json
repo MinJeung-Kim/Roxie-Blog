@@ -1,5 +1,13 @@
 [
   {
+    "title": "Data Type의 기본형과 참조형",
+    "description": "데이터 타입에 따라 메모리에 저장되는 원리와 기본 데이터 타입에 대해 알아보자.",
+    "date": "2024.01.10",
+    "category": "JavaScript",
+    "path": "javascript-basic",
+    "featured": true
+  },
+  {
     "title": "시각화 만들기",
     "description": "ReactFlow를 사용한 시각화 구현",
     "date": "2023.09.18",
@@ -24,15 +32,15 @@
     "featured": true
   },
   {
-    "title": "(CI/CD)Github 작업을 사용하여 AWS s3에 React 배포하기(1)",
-    "description": "AWS s3 버킷 생성",
+    "title": "(CI/CD)Github 작업을 사용하여 AWS S3에 React 배포하기(1)",
+    "description": "AWS S3 버킷 생성",
     "date": "2023.10.26",
     "category": "AWS",
     "path": "deploy-reactapp-1",
     "featured": true
   },
   {
-    "title": "(CI/CD)Github 작업을 사용하여 AWS s3에 React 배포하기(2)",
+    "title": "(CI/CD)Github 작업을 사용하여 AWS S3에 React 배포하기(2)",
     "description": "Github Action 설정",
     "date": "2023.10.26",
     "category": "AWS",
