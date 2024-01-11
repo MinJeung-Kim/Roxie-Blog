@@ -12,9 +12,6 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      boxShadow: {
-        custom: "-1px -3px 5px #b3b3b3",
-      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

@@ -1,8 +1,7 @@
+import { Metadata } from "next";
+import { getFeaturedPosts, getPostData } from "@/service/posts";
 import AdjacentPostCard from "@/components/AdjacentPostCard";
 import PostContent from "@/components/PostContent";
-import { getFeaturedPosts, getPostData } from "@/service/posts";
-import { Metadata } from "next";
-import Image from "next/image";
 
 type Props = {
   params: {
@@ -22,18 +21,10 @@ export async function generateMetadata({
 
 export default async function PostPage({ params: { slug } }: Props) {
   const post = await getPostData(slug);
-  const { title, path, next, prev } = post;
+  const { next, prev } = post;
 
   return (
-    <article className="m-12 mt-[5rem] overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
-      {/* h-1/5 : 화면의 5분의1 */}
-      <Image
-        className="w-full h-1/5 max-h-[500px]"
-        src={`/images/posts/${path}.png`}
-        alt={title}
-        width={760}
-        height={420}
-      />
+    <article className="pt-[5rem] m-12 mt-[5rem] overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
       <PostContent post={post} />
       <section className="flex shadow-md mt-[2rem]">
         {prev && <AdjacentPostCard post={prev} type="prev" />}

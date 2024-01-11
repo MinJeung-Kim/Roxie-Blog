@@ -1,7 +1,7 @@
-import Hero from "@/components/Hero";
 import { Metadata } from "next";
 import Link from "next/link";
-import { FiExternalLink } from "react-icons/fi";
+import Hero from "@/components/Hero";
+import ExportIcon from "@/components/icons/ExportIcon";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <div className="mt-[5rem]">
       <Hero />
-      <section className="p-8 m-8 text-center bg-gray-100 shadow-lg">
+      <section className="flex flex-col gap-4 p-8 m-8 text-center bg-gray-100 shadow-lg">
         <h2 className={TITLE_CLASS}>🙋‍♀️Who Am I?</h2>
         <p>
           개발을 사랑하는 프론트 개발자 <br />
@@ -38,7 +38,7 @@ export default function AboutPage() {
         <Link href="https://www.notion.so/roxiedev/Cover-Letter-b9deac9efa294d2ca1596dbd07c05dd4?pvs=4">
           <p className="flex items-center justify-center underline text-sky-600">
             바로가기
-            <FiExternalLink />
+            <ExportIcon />
           </p>
         </Link>
       </section>

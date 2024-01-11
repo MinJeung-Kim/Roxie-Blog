@@ -1,15 +1,15 @@
 "use client";
 
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Image from "next/image";
 import remarkGfm from "remark-gfm";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import Image from "next/image";
 
 export default function MarkdownViewer({ content }: { content: string }) {
   return (
     <ReactMarkdown
-      className="prose max-w-none lg:prose-xl"
+      className="prose text-black max-w-none lg:prose-xl"
       remarkPlugins={[remarkGfm]}
       components={{
         code({ node, inline, className, children, ...props }) {
@@ -22,6 +22,7 @@ export default function MarkdownViewer({ content }: { content: string }) {
               style={coldarkDark}
               customStyle={{
                 background: undefined,
+                color: undefined,
               }}
             >
               {String(children).replace(/\n$/, "")}

@@ -11,22 +11,22 @@ export default function PostCard({
     <Link href={`/posts/${path}`}>
       <article className="overflow-hidden rounded-md shadow-md hover:shadow-xl">
         <Image
-          className="w-full"
+          className="w-full rounded-2xl"
           src={`/images/posts/${path}.png`}
           alt={title}
           width={300}
           height={200}
         />
-        <div className="flex flex-col items-center p-4">
+        <div className="flex flex-col items-center gap-4 p-4">
           <div className="flex items-center justify-between w-full">
-            <span className="px-2 py-[0.15rem] my-2 text-[0.8rem] text-white bg-[#FF6666] rounded-xl">
+            <span className="px-2 py-[0.15rem] my-2 text-[0.8rem] text-[#fff] bg-[#FF6666] rounded-xl">
               ɷ {category}
             </span>
             <time className="text-gray-500 text-[0.85rem]">
               {date.toString()}
             </time>
           </div>
-          <h3 className="text-base mb-[0.5rem]">{title}</h3>
+          <h3 className="text-base">{title}</h3>
           {/* truncate  : 일정한 높이 지정*/}
           <p className="w-full text-[0.85rem] text-[#898888] text-center truncate">
             {description}
