@@ -4,7 +4,7 @@ import profileImage from "../../public/images/profile.png";
 import TypeItForm from "./ui/TypeItForm";
 
 const HEADER_COLOR =
-  "text-black hover:text-yellow-500 transition-colors duration-[0.3s]";
+  "text-black hover:text-yellow-500 transition-colors duration-[0.3s] text-sm";
 const HEADER =
   "fixed flex items-center justify-between w-full px-12 pt-[0.8rem] pb-[0.5rem] mx-auto z-[999] max-w-screen-2xl shadow-[3px_-1px_4px_0px_rgba(136,133,194,0.611)] bg-[#fff]";
 
@@ -33,11 +33,11 @@ export default function Header() {
       </div>
 
       <nav className="flex gap-6">
-        <Link href="/about" className={HEADER_COLOR}>
-          About
-        </Link>
         <Link href="/posts" className={HEADER_COLOR}>
-          Posts
+          전체 게시글
+        </Link>
+        <Link href="/about" className={HEADER_COLOR}>
+          개발자 소개
         </Link>
         <Link href="/contact" className={HEADER_COLOR}>
           Contact
