@@ -15,32 +15,46 @@ export default function MarkdownViewer({ content }: { content: string }) {
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || "");
           return !inline && match ? (
-            <SyntaxHighlighter
-              language={match[1]}
-              PreTag="div"
-              {...props}
-              style={coldarkDark}
-              customStyle={{
-                background: undefined,
-                color: undefined,
-              }}
-            >
-              {String(children).replace(/\n$/, "")}
-            </SyntaxHighlighter>
+            <>
+              <div className="text-right language-label text-[0.85rem] font-bold text-[#a3a4a7]">
+                {match[1].toUpperCase()}
+              </div>
+              <SyntaxHighlighter
+                language={match[1]}
+                PreTag="div"
+                {...props}
+                style={coldarkDark}
+                showLineNumbers={true}
+                lineNumberStyle={{ color: "#888", minWidth: "2em" }}
+                customStyle={{
+                  background: undefined,
+                  color: undefined,
+                }}
+              >
+                {String(children).replace(/\n$/, "")}
+              </SyntaxHighlighter>
+            </>
           ) : (
             <code {...props} className={className}>
               {children}
             </code>
           );
         },
-        img: (image) => (
-          <Image
-            className="w-full max-h-[50rem] object-cover"
-            src={image.src || ""}
-            alt={image.alt || ""}
-            width={500}
-            height={350}
-          />
+        img: ({ src, alt, title }) => (
+          <figure className="figure-class">
+            <Image
+              className="w-full max-h-[50rem] object-cover"
+              src={src || ""}
+              alt={alt || ""}
+              width={500}
+              height={350}
+            />
+            {title && (
+              <figcaption className="text-center figcaption-class text-slate-400 text-[0.6rem]">
+                ɷ {title}
+              </figcaption>
+            )}
+          </figure>
         ),
       }}
     >

@@ -1,6 +1,6 @@
 [
   {
-    "title": "Data Type의 기본형과 참조형",
+    "title": "Data Types",
     "description": "데이터 타입에 따라 메모리에 저장되는 원리와 기본 데이터 타입에 대해 알아보자.",
     "date": "2024.01.10",
     "category": "JavaScript",
@@ -45,14 +45,6 @@
     "date": "2023.10.26",
     "category": "AWS",
     "path": "deploy-reactapp-2",
-    "featured": false
-  },
-  {
-    "title": "2021년 리뷰",
-    "description": "2021년 한해 동안 배운 기술들, 생각들 정리",
-    "date": "2021.12.31",
-    "category": "My Story",
-    "path": "review-2021",
     "featured": false
   }
 ]
