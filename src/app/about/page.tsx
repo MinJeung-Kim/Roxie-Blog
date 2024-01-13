@@ -12,7 +12,7 @@ const TITLE_CLASS = "text-2xl font-bold text-gray-800 my-2";
 
 export default function AboutPage() {
   return (
-    <div className="mt-[5rem]">
+    <div className="mt-[7rem]">
       <Hero />
       <section className="flex flex-col gap-4 p-8 m-8 text-center bg-gray-100 shadow-lg">
         <h2 className={TITLE_CLASS}>🙋‍♀️Who Am I?</h2>

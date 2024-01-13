@@ -21,7 +21,7 @@ export default function PostCard({
         />
         <div className="flex flex-col items-center gap-4 p-4">
           <div className="flex items-center justify-between w-full">
-            <span className="px-2 my-2 text-[0.8rem] text-[#fff] bg-[#FF6666] rounded-xl">
+            <span className="flex items-center h-6 px-2 my-2 text-[0.8rem] text-[#fff] bg-[#FF6666] rounded-xl">
               ɷ {category}
             </span>
             <time className="text-gray-500 text-[0.85rem]">

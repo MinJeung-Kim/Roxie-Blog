@@ -39,7 +39,15 @@ export default function MarkdownViewer({ content }: { content: string }) {
               </SyntaxHighlighter>
             </>
           ) : (
-            <code {...props} className={className}>
+            <code
+              style={{
+                backgroundColor: "lightgray",
+                padding: "2px",
+                borderRadius: "4px",
+              }}
+              {...props}
+              className={className}
+            >
               {children}
             </code>
           );
