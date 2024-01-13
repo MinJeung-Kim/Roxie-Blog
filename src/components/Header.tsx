@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import profileImage from "../../public/images/profile.png";
+import logoImage from "../../public/images/logo.png";
 import TypeItForm from "./ui/TypeItForm";
 import GithubFillIcon from "./icons/GithubFillIcon";
 
@@ -16,7 +16,7 @@ export default function Header() {
       <Link href="/" className="flex items-center gap-2">
         <Image
           className="mx-auto rounded-full cursor-pointer"
-          src={profileImage}
+          src={logoImage}
           alt="Picture of the author"
           width={40}
           height={40}
