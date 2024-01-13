@@ -15,11 +15,12 @@ export default function AdjacentPostCard({
   post: { path, title, description },
   type,
 }: Props) {
+  const pathUrl = path.split("-")[0];
   return (
     <Link href={`/posts/${path}`} className="relative w-full bg-black max-h-56">
       <Image
         className="w-full opacity-40"
-        src={`/images/posts/${path}.png`}
+        src={`/images/posts/${pathUrl}.png`}
         alt={title}
         width={150}
         height={100}

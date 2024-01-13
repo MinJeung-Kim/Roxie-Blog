@@ -7,6 +7,7 @@ body {
   height: 100vh;
   overflow-y: auto;
   font-family: -apple-system, JejuGothic, sans-serif;
+  line-height: 1.95rem;
 }
 
 ::-webkit-scrollbar {

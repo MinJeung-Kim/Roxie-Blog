@@ -1,5 +1,5 @@
-import { AiFillGithub } from "react-icons/ai";
+import { VscGithub } from "react-icons/vsc";
 
 export default function GithubFillIcon() {
-  return <AiFillGithub />;
+  return <VscGithub />;
 }

@@ -39,8 +39,8 @@ export default async function PostPage({ params: { slug } }: Props) {
   );
 
   return (
-    <div className="flex">
-      <article className="pt-[5rem] m-12 mt-[5rem] overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
+    <div className="flex justify-center pl-8 pr-12">
+      <article className="pt-[5rem] px-6 m-12 mt-[5rem] overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
         <PostContent post={post} />
         <section className="flex shadow-md mt-[2rem]">
           {prev && <AdjacentPostCard post={prev} type="prev" />}
@@ -48,7 +48,7 @@ export default async function PostPage({ params: { slug } }: Props) {
         </section>
       </article>
       <article className="min-w-[15rem] mt-[5rem] pt-[3rem] relative">
-        <div className="w-[16%] fixed flex flex-col gap-4">
+        <div className="w-[17%] fixed flex flex-col gap-4">
           <div className="flex items-center justify-between w-[60%] text-[1.5rem]">
             <LikeIcon className={ICON_CLASS} />
             <ShareSocialIcon className={ICON_CLASS} />

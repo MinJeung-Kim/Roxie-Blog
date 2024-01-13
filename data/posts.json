@@ -1,5 +1,13 @@
 [
   {
+    "title": "실행 컨텍스트의 구성 요소 - 스코프 체인",
+    "description": "스코프 & 스코프 체인 & OuterEnvironment Reference(외부환경 참조)",
+    "date": "2024.01.13",
+    "category": "JavaScript",
+    "path": "scope",
+    "featured": true
+  },
+  {
     "title": "실행 컨텍스트란 무엇인가? - 기본 개념 소개",
     "description": "실행 컨텍스트의 정의와 기본적인 개념과 동작원리에 대해 알아보자.",
     "date": "2024.01.13",
