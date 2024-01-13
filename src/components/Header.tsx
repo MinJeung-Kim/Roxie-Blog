@@ -28,7 +28,7 @@ export default function Header() {
           </span>
         </h1>
       </Link>
-      <div className="leading-3">
+      <div className="leading-[0.5rem]">
         <TypeItForm />
       </div>
 
@@ -39,9 +39,9 @@ export default function Header() {
         <Link href="/about" className={HEADER_COLOR}>
           개발자 소개
         </Link>
-        <Link href="/contact" className={HEADER_COLOR}>
+        {/* <Link href="/contact" className={HEADER_COLOR}>
           Contact
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );

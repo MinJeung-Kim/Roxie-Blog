@@ -1,10 +1,12 @@
 "use client";
 
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import remarkGfm from "remark-gfm";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 
 export default function MarkdownViewer({ content }: { content: string }) {
   return (
@@ -41,13 +43,15 @@ export default function MarkdownViewer({ content }: { content: string }) {
           );
         },
         img: ({ src, alt, title }) => (
-          <figure className="figure-class">
-            <Image
+          <figure>
+            <DynamicImage
               className="w-full max-h-[50rem] object-cover"
               src={src || ""}
               alt={alt || ""}
+              // layout="fill"
               width={500}
               height={350}
+              // layout="responsive"
             />
             {title && (
               <figcaption className="text-center figcaption-class text-slate-400 text-[0.6rem]">
@@ -57,6 +61,7 @@ export default function MarkdownViewer({ content }: { content: string }) {
           </figure>
         ),
       }}
+      unwrapDisallowed={true}
     >
       {content}
     </ReactMarkdown>

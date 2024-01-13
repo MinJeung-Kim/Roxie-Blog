@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AiTwotoneCalendar } from "react-icons/ai";
 import { PostData } from "@/service/posts";
 import MarkdownViewer from "./MarkdownViewer";
 
@@ -19,8 +18,7 @@ export default function PostContent({ post }: { post: PostData }) {
         width={760}
         height={420}
       />
-      {/* <div className="flex items-center self-end text-sky-600">
-        <AiTwotoneCalendar />
+      {/* <div className="flex items-center self-end text-sky-600"> 
         <p className="ml-2 font-semibold">{date.toString()}</p>
       </div> */}
 
