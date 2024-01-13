@@ -7,12 +7,14 @@ type Props = { post: Post };
 export default function PostCard({
   post: { title, description, date, category, path },
 }: Props) {
+  const pathUrl = path.split("-")[0];
+
   return (
     <Link href={`/posts/${path}`}>
       <article className="overflow-hidden rounded-md shadow-md hover:shadow-xl">
         <Image
           className="w-full rounded-2xl"
-          src={`/images/posts/${path}.png`}
+          src={`/images/posts/${pathUrl}.png`}
           alt={title}
           width={300}
           height={200}

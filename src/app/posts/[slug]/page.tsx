@@ -48,7 +48,7 @@ export default async function PostPage({ params: { slug } }: Props) {
         </section>
       </article>
       <article className="min-w-[15rem] mt-[5rem] pt-[3rem] relative">
-        <div className="w-[15%] fixed flex flex-col gap-4">
+        <div className="w-[16%] fixed flex flex-col gap-4">
           <div className="flex items-center justify-between w-[60%] text-[1.5rem]">
             <LikeIcon className={ICON_CLASS} />
             <ShareSocialIcon className={ICON_CLASS} />
@@ -62,7 +62,7 @@ export default async function PostPage({ params: { slug } }: Props) {
           <span className="font-semibold pb-[0.5rem] border-b border-[#e5e6e8]">
             목차
           </span>
-          <ul className="flex flex-col gap-4 text-sm">
+          <ul className="flex flex-col gap-4 text-sm h-[50vh] overflow-auto">
             {toc.map((header) => (
               // header 객체의 모든 속성을 PostIndex 컴포넌트에 전달
               <PostIndex key={header.text} {...header} />

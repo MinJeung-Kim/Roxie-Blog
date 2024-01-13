@@ -9,6 +9,21 @@ body {
   font-family: -apple-system, JejuGothic, sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #596a8c;
+  border-radius: 20px;
+  border: 3px solid var(--primary);
+}
+
 @font-face {
   font-family: "JejuGothic";
   src: url("/fonts/JejuGothic.ttf") format("truetype");

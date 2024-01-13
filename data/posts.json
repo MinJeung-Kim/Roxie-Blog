@@ -1,5 +1,21 @@
 [
   {
+    "title": "실행 컨텍스트란 무엇인가? - 기본 개념 소개",
+    "description": "실행 컨텍스트의 정의와 기본적인 개념과 동작원리에 대해 알아보자.",
+    "date": "2024.01.13",
+    "category": "JavaScript",
+    "path": "execution-context",
+    "featured": true
+  },
+  {
+    "title": "얉은 복사와 깊은 복사",
+    "description": "예제를 통해 얉은 복사와 깊은복사의 차이점을 알아보자.",
+    "date": "2024.01.13",
+    "category": "JavaScript",
+    "path": "javascript-copy",
+    "featured": true
+  },
+  {
     "title": "Data Types",
     "description": "데이터 타입에 따라 메모리에 저장되는 원리와 기본 데이터 타입에 대해 알아보자.",
     "date": "2024.01.10",
@@ -13,14 +29,14 @@
     "date": "2023.09.18",
     "category": "React",
     "path": "visualization",
-    "featured": true
+    "featured": false
   },
   {
     "title": "input object 타입 동적 업데이트",
     "description": "현업에서 사용하는 object 타입 동적 업데이트",
     "date": "2023.09.17",
     "category": "React",
-    "path": "useState-object-type-update",
+    "path": "react-useState",
     "featured": false
   },
   {
@@ -36,7 +52,7 @@
     "description": "AWS S3 버킷 생성",
     "date": "2023.10.26",
     "category": "AWS",
-    "path": "deploy-reactapp-1",
+    "path": "s3-deploy-reactapp-1",
     "featured": false
   },
   {
@@ -44,7 +60,7 @@
     "description": "Github Action 설정",
     "date": "2023.10.26",
     "category": "AWS",
-    "path": "deploy-reactapp-2",
+    "path": "s3-deploy-reactapp-2",
     "featured": false
   }
 ]
