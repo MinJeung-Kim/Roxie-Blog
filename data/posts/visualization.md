@@ -1,6 +1,6 @@
 [React Flow](https://reactflow.dev/docs/api/react-flow-props/)는 API나 Examples가 잘 설명되어 있어서 필요한 props를 가져다 사용할 수 있다.
 
-```tsx
+```typescript
 import ReactFlow, {
   Node,
   Edge,
@@ -40,13 +40,13 @@ import "reactflow/dist/style.css";
 
 `nodeTypes`는 `custom`타입으로 원하는 UI로 template를 만들 수 있다.
 
-```
+```typescript
 const nodeTypes = {
   custom: CustomLayout,
 };
 ```
 
-```tsx
+```typescript
 const CustomNode: React.FC<IProps> = ({ data }) => {
   const { setSelectedNode } = useVisualizations();
 

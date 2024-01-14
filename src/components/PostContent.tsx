@@ -7,7 +7,7 @@ export default function PostContent({ post }: { post: PostData }) {
   const pathUrl = path.split("-")[0];
 
   return (
-    <section className="flex flex-col p-4">
+    <section className="flex flex-col px-20 py-4">
       <h1 className="mb-4 text-4xl">{title}</h1>
       <p className="text-[1rem] text-[#929292]">{description}</p>
       <div className="mt-4 mb-8 border-2 w-44 border-sky-600" />

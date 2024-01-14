@@ -12,7 +12,8 @@ const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 export default function MarkdownViewer({ content }: { content: string }) {
   return (
     <ReactMarkdown
-      className="prose text-black max-w-none lg:prose-xl"
+      // className="text-base prose backdrop:max-w-none lg:prose-xl"
+      className="text-base prose backdrop:max-w-none lg:prose-xl lg:prose-h2:text-[2rem] lg:prose-h3:text-[1.5rem] lg:prose-p:text-[1rem] lg:prose-li:text-[1rem] lg:prose-span:text-[1rem] lg:prose-th:text-[1rem] lg:prose-td:text-[1rem]"
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw]}
       components={{

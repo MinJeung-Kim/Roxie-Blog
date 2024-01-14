@@ -1,5 +1,13 @@
 [
   {
+    "title": "Next.js로 나만의 블로그 만들기: 프롤로그",
+    "description": "Next.js 기초부터 실제 배포까지 당신이 알아야 할 모든 것",
+    "date": "2024.01.14",
+    "category": "NextJS",
+    "path": "nextjs-prologue",
+    "featured": true
+  },
+  {
     "title": "실행 컨텍스트의 구성 요소 - 스코프 체인",
     "description": "스코프 & 스코프 체인 & OuterEnvironment Reference(외부환경 참조)",
     "date": "2024.01.13",

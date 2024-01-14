@@ -5,7 +5,7 @@
 
 > 💡 process.env.AWS_ACCESS_KEY_ID와 같이 저장되기 때문에 후에 AWS CLI에서 편하게 명령어를 입력을 위해 AWS_ACCESS_KEY_ID와 AWS_SECRET_ACCESS_KEY의 이름은 반드시 맞춰서 생성한다.
 >
-> ```
+> ```yml
 > // workflow 사용 예
 >  - name: Deploy                  # Upload build file to S3
 >      env:
@@ -52,14 +52,14 @@ jobs: # Job 설정
 ```
 
 ## CI/CD 확인
+
 1. `push` 명령어를 사용하면 자동으로 배포된 것을 확인 할 수 있다.
-![5](/images/posts/deployAWS/aws2-5.png)
-![6](/images/posts/deployAWS/aws2-6.png)
+   ![5](/images/posts/deployAWS/aws2-5.png)
+   ![6](/images/posts/deployAWS/aws2-6.png)
 
 ## End Point URL으로 확인
+
 ![7](/images/posts/deployAWS/aws2-7.png)
-
-
 
 참고:
 https://synuns.tistory.com/75
