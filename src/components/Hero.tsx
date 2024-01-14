@@ -6,6 +6,10 @@ import CopyIcon from "./icons/CopyIcon";
 import ExportIcon from "./icons/ExportIcon";
 import profileImage from "../../public/images/profile.png";
 
+const LINK_CSS =
+  "flex items-center gap-1 hover:underline hover:text-yellow-500 hover:decoration-yellow-500 hover:underline-offset-4";
+const LINK_SPAN_CSS = "text-[#494d50] text-lg";
+
 // priority : 제일먼저 다운받아서 보여질 dom.
 export default function Hero() {
   const textToCopy = "focso5@gmail.com";
@@ -38,12 +42,15 @@ export default function Hero() {
             <CopyIcon />
           </div>
 
-          <Link
-            href="https://github.com/MinJeung-Kim"
-            className="flex items-center gap-1 hover:underline hover:decoration-yellow-500 hover:underline-offset-4"
-          >
-            <span className="text-[#494d50] text-lg hover:text-yellow-500">
+          <Link href="https://github.com/MinJeung-Kim" className={LINK_CSS}>
+            <span className={LINK_SPAN_CSS}>
               깃헙: https://github.com/MinJeung-Kim
+            </span>
+            <ExportIcon />
+          </Link>
+          <Link href="https://crossfit.gitbook.io/study/" className={LINK_CSS}>
+            <span className={LINK_SPAN_CSS}>
+              깃북: https://gitbook.io/study/
             </span>
             <ExportIcon />
           </Link>
