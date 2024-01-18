@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import path from "path";
 
-import PostIndex from "@/components/PostIndex";
+import PostToc from "@/components/PostToc";
 import PostContent from "@/components/PostContent";
 import LikeIcon from "@/components/icons/LikeIcon";
 import PencilIcon from "@/components/icons/PencilIcon";
@@ -42,13 +42,13 @@ export default async function PostPage({ params: { slug } }: Props) {
     <div className="flex justify-center pl-8 pr-12">
       <article className="pt-[5rem] px-6 m-12 mt-[5rem] overflow-hidden bg-gray-100 shadow-lg rounded-2xl">
         <PostContent post={post} />
-        <section className="flex shadow-md mt-[2rem]">
+        <section className="flex shadow-md mt-[2rem] overflow-hidden">
           {prev && <AdjacentPostCard post={prev} type="prev" />}
           {next && <AdjacentPostCard post={next} type="next" />}
         </section>
       </article>
       <article className="min-w-[15rem] mt-[5rem] pt-[3rem] relative">
-        <div className="w-[17%] fixed flex flex-col gap-4">
+        <div className="w-[17%] h-full fixed flex flex-col gap-4">
           <div className="flex items-center justify-between w-[60%] text-[1.5rem]">
             <LikeIcon className={ICON_CLASS} />
             <ShareSocialIcon className={ICON_CLASS} />
@@ -62,12 +62,13 @@ export default async function PostPage({ params: { slug } }: Props) {
           <span className="font-semibold pb-[0.5rem] border-b border-[#e5e6e8]">
             목차
           </span>
-          <ul className="flex flex-col gap-4 text-sm h-[50vh] overflow-auto">
+          {/*  <ul className="flex flex-col gap-4 text-sm h-[50vh] overflow-auto">
             {toc.map((header) => (
               // header 객체의 모든 속성을 PostIndex 컴포넌트에 전달
-              <PostIndex key={header.text} {...header} />
-            ))}
-          </ul>
+              <PostToc key={header.text} {...header} />
+            ))} 
+          </ul>*/}
+          <PostToc />
         </div>
       </article>
     </div>

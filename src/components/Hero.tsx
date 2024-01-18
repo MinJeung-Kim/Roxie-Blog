@@ -26,7 +26,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex items-center justify-between gap-[1.8rem] py-8 px-[5rem]">
+    <section className="flex flex-col items-start justify-between gap-[1.8rem]">
+      <Image
+        className="rounded-full"
+        src={profileImage}
+        alt="Picture of the author"
+        width={280}
+        height={280}
+        priority
+      />
       <div className="flex flex-col items-start gap-[0.5rem]">
         <div className="flex items-end gap-4">
           <h2 className="mb-1 text-5xl">김민정</h2>
@@ -56,14 +64,6 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <Image
-        className="rounded-full"
-        src={profileImage}
-        alt="Picture of the author"
-        width={185}
-        height={185}
-        priority
-      />
     </section>
   );
 }

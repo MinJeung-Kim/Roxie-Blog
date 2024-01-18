@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -17,7 +18,7 @@ export default function MarkdownViewer({ content }: { content: string }) {
       // className="text-base prose backdrop:max-w-none lg:prose-xl lg:prose-code:text-[0.95rem] lg:prose-pre:p-3"
       className={MARKDOWN_CSS}
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
+      rehypePlugins={[rehypeRaw, rehypeSlug]}
       components={{
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || "");

@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import logoImage from "../../public/images/logo.png";
 import TypeItForm from "./ui/TypeItForm";
-import GithubFillIcon from "./icons/GithubFillIcon";
+import logoImage from "../../public/images/logo.png";
+import HeaderNavigation from "./HeaderNavigation";
 
-const NAV_CLASS = "text-sm";
 const NAV_HOVER_CLASS =
   "text-black hover:text-yellow-500 transition-colors duration-[0.3s]";
 const HEADER_CLASS =
@@ -22,35 +21,18 @@ export default function Header() {
           height={40}
           priority
         />
-        <h1 className={`flex flex-col text-base ${NAV_HOVER_CLASS}`}>
+        <div className={`flex flex-col text-base ${NAV_HOVER_CLASS}`}>
           <span className="leading-[1rem] font-bold text-sm">
-            ROXIE
+            ROXIE.
             <br />
             DEV
           </span>
-        </h1>
+        </div>
       </Link>
       <div className="leading-[0.5rem]">
         <TypeItForm />
       </div>
-
-      <nav className="flex items-center gap-6">
-        <Link href="/posts" className={`${NAV_CLASS} ${NAV_HOVER_CLASS}`}>
-          전체 게시글
-        </Link>
-        <Link href="/about" className={`${NAV_CLASS} ${NAV_HOVER_CLASS}`}>
-          개발자 소개
-        </Link>
-        <Link
-          href="https://github.com/MinJeung-Kim"
-          className={`text-[1.58rem] ${NAV_HOVER_CLASS}`}
-        >
-          <GithubFillIcon />
-        </Link>
-        {/* <Link href="/contact" className={NAV_CLASS}>
-          Contact
-        </Link> */}
-      </nav>
+      <HeaderNavigation />
     </header>
   );
 }

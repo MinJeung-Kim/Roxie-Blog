@@ -1,5 +1,13 @@
 [
   {
+    "title": "Next.js로 나만의 블로그 만들기: 목차(TOC) 구현",
+    "description": "Intersection Observer API를 활용한 클릭한 타이틀 부분으로 스크롤 이동하는 기능을 구현해 보자.",
+    "date": "2024.01.15",
+    "category": "NextJS",
+    "path": "nextjs-post-toc",
+    "featured": true
+  },
+  {
     "title": "Next.js로 나만의 블로그 만들기: 프롤로그",
     "description": "Next.js 기초부터 실제 배포까지 당신이 알아야 할 모든 것",
     "date": "2024.01.14",
