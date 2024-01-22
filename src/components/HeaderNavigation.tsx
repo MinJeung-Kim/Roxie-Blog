@@ -31,6 +31,8 @@ export default function HeaderNavigation() {
       </Link>
       <Link
         href="https://github.com/MinJeung-Kim"
+        target="_blank"
+        rel="noopener noreferrer"
         className={`text-[1.58rem] ${NAV_HOVER_CLASS}`}
       >
         <GithubFillIcon />

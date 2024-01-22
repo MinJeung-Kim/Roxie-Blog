@@ -50,13 +50,23 @@ export default function Hero() {
             <CopyIcon />
           </div>
 
-          <Link href="https://github.com/MinJeung-Kim" className={LINK_CSS}>
+          <Link
+            href="https://github.com/MinJeung-Kim"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={LINK_CSS}
+          >
             <span className={LINK_SPAN_CSS}>
               깃헙: https://github.com/MinJeung-Kim
             </span>
             <ExportIcon />
           </Link>
-          <Link href="https://crossfit.gitbook.io/study/" className={LINK_CSS}>
+          <Link
+            href="https://crossfit.gitbook.io/study/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={LINK_CSS}
+          >
             <span className={LINK_SPAN_CSS}>
               깃북: https://gitbook.io/study/
             </span>

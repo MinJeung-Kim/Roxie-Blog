@@ -1,5 +1,21 @@
 [
   {
+    "title": "단일 연결 리스트를 사용한 stack 자료구조 : 응용편",
+    "description": "객체지향 프로그래밍으로 stack 자료구조를 구현해보자.",
+    "date": "2024.01.19",
+    "category": "Typescript",
+    "path": "typescript-stack-2",
+    "featured": true
+  },
+  {
+    "title": "단일 연결 리스트를 사용한 stack 자료구조 : 기본편",
+    "description": "단일 연결 리스트와 stack 자료구조에대해 알아보자.",
+    "date": "2024.01.19",
+    "category": "Typescript",
+    "path": "typescript-stack-1",
+    "featured": true
+  },
+  {
     "title": "Next.js로 나만의 블로그 만들기: 목차(TOC) 구현",
     "description": "Intersection Observer API를 활용한 클릭한 타이틀 부분으로 스크롤 이동하는 기능을 구현해 보자.",
     "date": "2024.01.15",

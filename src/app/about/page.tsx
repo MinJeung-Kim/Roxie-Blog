@@ -45,7 +45,11 @@ export default function AboutPage() {
         </div>
         <div className={CONTENT_CLASS}>
           <h2 className={TITLE_CLASS}>📃Cover Letter</h2>
-          <Link href="https://www.notion.so/roxiedev/Cover-Letter-b9deac9efa294d2ca1596dbd07c05dd4?pvs=4">
+          <Link
+            href="https://www.notion.so/roxiedev/Cover-Letter-b9deac9efa294d2ca1596dbd07c05dd4?pvs=4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p className="flex items-center justify-center underline text-sky-600">
               바로가기
               <ExportIcon />
