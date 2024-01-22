@@ -1,8 +1,16 @@
 [
   {
     "title": "Next.js로 나만의 블로그 만들기: Headless CMS",
-    "description": "sanity를 사용하여 Headless CMS를 구현해 본다.",
-    "date": "2024.01.22",
+    "description": "sanity의 기본 개념과 사용방법에 대해 알아보자.",
+    "date": "2024.01.23",
+    "category": "NextJS",
+    "path": "sanity-headlessCms",
+    "featured": true
+  },
+  {
+    "title": "Sanity란 무엇인가?",
+    "description": "sanity의 기본 개념과 사용방법에 대해 알아보자.",
+    "date": "2024.01.23",
     "category": "NextJS",
     "path": "sanity-headlessCms",
     "featured": true
