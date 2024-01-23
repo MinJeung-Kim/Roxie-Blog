@@ -1,18 +1,18 @@
 [
   {
-    "title": "Next.js로 나만의 블로그 만들기: Headless CMS",
-    "description": "sanity의 기본 개념과 사용방법에 대해 알아보자.",
-    "date": "2024.01.23",
-    "category": "NextJS",
-    "path": "sanity-headlessCms",
+    "title": "react-markdown 라이브러리에서 bash 언어로 코드 블록을 작성했을 때",
+    "description": "sanity의 주요 특징과 사용방법에 대해 알아보자.",
+    "date": "2024.01.24",
+    "category": "TIL",
+    "path": "til-react-markdown",
     "featured": true
   },
   {
-    "title": "Sanity란 무엇인가?",
-    "description": "sanity의 기본 개념과 사용방법에 대해 알아보자.",
+    "title": "Sanity 사용하기",
+    "description": "sanity의 주요 특징과 사용방법에 대해 알아보자.",
     "date": "2024.01.23",
     "category": "NextJS",
-    "path": "sanity-headlessCms",
+    "path": "sanity",
     "featured": true
   },
   {
