@@ -133,4 +133,8 @@ export default {
 };
 ```
 
+<<<<<<< HEAD
 ![CMS](/images/posts/nextBlog/sanity5.png "preview 적용 화면")
+=======
+![preview](/images/posts/nextBlog/sanity5.png "preview 적용 화면")
+>>>>>>> feature/sanity_crud
