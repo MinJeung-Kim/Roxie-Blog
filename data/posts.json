@@ -1,21 +1,5 @@
 [
   {
-    "title": "자료구조와 알고리즘",
-    "description": "프로그래밍 언어로 코드를 작성한다면 기본적으로 알고 있어야되는 지식.",
-    "date": "2024.01.25",
-    "category": "JavaScript",
-    "path": "dataStructure-algorithm",
-    "featured": true
-  },
-  {
-    "title": "react-markdown 라이브러리 bug",
-    "description": "react-markdown 라이브러리에서 bash 언어로 코드 블록을 작성했을 때.",
-    "date": "2024.01.24",
-    "category": "TIL",
-    "path": "til-react-markdown",
-    "featured": true
-  },
-  {
     "title": "Sanity 사용하기",
     "description": "sanity의 주요 특징과 사용방법에 대해 알아보자.",
     "date": "2024.01.24",
