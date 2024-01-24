@@ -9,15 +9,14 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
-const MARKDOWN_PROSE_CSS =
-  "prose-code:text-[0.95rem] prose-li:m-0 prose-input:mt-0 prose-a:text-[#abab06] lg:prose-pre:p-3 lg:prose-h2:text-[2rem] lg:prose-h3:text-[1.5rem] lg:prose-p:text-[1rem] lg:prose-li:text-[1rem] lg:prose-span:text-[1rem] lg:prose-th:text-[1rem] lg:prose-td:text-[1rem] lg:prose-ol:mb-0 lg:prose-ul:mt-0";
-const MARKDOWN_CSS = "text-base prose backdrop:max-w-none";
+const MARKDOWN_CSS =
+  "text-base prose backdrop:max-w-none lg:prose-xl lg:prose-code:text-[0.95rem] lg:prose-a:text-[#abab06] lg:prose-pre:p-3 lg:prose-h2:text-[2rem] lg:prose-h3:text-[1.5rem] lg:prose-p:text-[1rem] lg:prose-li:text-[1rem] lg:prose-span:text-[1rem] lg:prose-th:text-[1rem] lg:prose-td:text-[1rem] lg:prose-ol:mb-0 lg:prose-ul:mt-0";
 
 export default function MarkdownViewer({ content }: { content: string }) {
   return (
     <ReactMarkdown
       // className="text-base prose backdrop:max-w-none lg:prose-xl lg:prose-code:text-[0.95rem] lg:prose-pre:p-3"
-      className={`${MARKDOWN_CSS} ${MARKDOWN_PROSE_CSS} prose-pre:prose-r`}
+      className={MARKDOWN_CSS}
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw, rehypeSlug]}
       components={{
