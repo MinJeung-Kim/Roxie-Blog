@@ -17,7 +17,6 @@ export default function Hero() {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(textToCopy);
-      console.log(textToCopy);
 
       alert("텍스트가 클립보드에 복사되었습니다!");
     } catch (err) {

@@ -1,15 +1,15 @@
-export default {
+import {defineType, defineField} from 'sanity'
+
+export default defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
   fields: [
-    {name: 'title', title: 'Title', type: 'string'},
-    {name: 'description', title: 'Description', type: 'string'},
-    {name: 'category', title: 'Category', type: 'string'},
-    {name: 'indt', title: 'Indt', type: 'date'},
-    {name: 'updt', title: 'Updt', type: 'date'},
-    {name: 'path', title: 'Path', type: 'string'},
-    {name: 'featured', title: 'Featured', type: 'boolean'},
+    defineField({name: 'title', title: 'Title', type: 'string'}),
+    defineField({name: 'description', title: 'Description', type: 'string'}),
+    defineField({name: 'category', title: 'Category', type: 'string'}),
+    defineField({name: 'path', title: 'Path', type: 'string'}),
+    defineField({name: 'featured', title: 'Featured', type: 'boolean'}),
   ],
   preview: {
     select: {
@@ -17,4 +17,4 @@ export default {
       subtitle: 'description',
     },
   },
-}
+})

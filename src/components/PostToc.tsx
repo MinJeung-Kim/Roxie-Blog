@@ -46,8 +46,6 @@ export default function PostToc() {
   return (
     <ul className="overflow-auto h-2/4">
       {headingEls.map((heading) => {
-        console.dir(heading);
-
         return (
           <li key={heading.id} className={applyPadding(heading.localName)}>
             <a

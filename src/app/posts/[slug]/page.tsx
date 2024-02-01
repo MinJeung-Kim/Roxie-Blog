@@ -1,15 +1,14 @@
 import { Metadata } from "next";
-import path from "path";
 
 import PostToc from "@/components/PostToc";
+import EyeIcon from "@/components/icons/EyeIcon";
 import PostContent from "@/components/PostContent";
 import LikeIcon from "@/components/icons/LikeIcon";
-import PencilIcon from "@/components/icons/PencilIcon";
 import AdjacentPostCard from "@/components/AdjacentPostCard";
 import ShareSocialIcon from "@/components/icons/ShareSocialIcon";
 
-import { markdownToToc } from "@/util/markdownToToc";
-import { getFeaturedPosts, getPostData } from "@/service/posts";
+import { dateFormat } from "@/util/dateFormat";
+import { Post, getFeaturedPosts, getPostData } from "@/service/posts";
 
 type Props = {
   params: {
@@ -32,11 +31,7 @@ const ICON_CLASS =
 
 export default async function PostPage({ params: { slug } }: Props) {
   const post = await getPostData(slug);
-  const { next, prev, date } = post;
-
-  const toc = markdownToToc(
-    path.join(process.cwd(), "data", "posts", `${post.path}.md`)
-  );
+  const { next, prev, createdAt, updatedAt } = post;
 
   return (
     <div className="flex justify-center pl-8 pr-12">
@@ -51,23 +46,21 @@ export default async function PostPage({ params: { slug } }: Props) {
         <div className="w-[17%] h-full fixed flex flex-col gap-4">
           <div className="flex items-center justify-between w-[60%] text-[1.5rem]">
             <LikeIcon className={ICON_CLASS} />
+            <EyeIcon className={ICON_CLASS} />
             <ShareSocialIcon className={ICON_CLASS} />
-            <PencilIcon className={ICON_CLASS} />
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-[0.8rem]"> 생성일: {date.toString()} </span>
-            <span className="text-[0.8rem]"> 수정일: {date.toString()} </span>
+            <span className="text-[0.8rem]">
+              생성일: {dateFormat(createdAt)}
+            </span>
+            <span className="text-[0.8rem]">
+              수정일: {dateFormat(updatedAt)}
+            </span>
           </div>
 
           <span className="font-semibold pb-[0.5rem] border-b border-[#e5e6e8]">
             목차
           </span>
-          {/*  <ul className="flex flex-col gap-4 text-sm h-[50vh] overflow-auto">
-            {toc.map((header) => (
-              // header 객체의 모든 속성을 PostIndex 컴포넌트에 전달
-              <PostToc key={header.text} {...header} />
-            ))} 
-          </ul>*/}
           <PostToc />
         </div>
       </article>
@@ -78,7 +71,7 @@ export default async function PostPage({ params: { slug } }: Props) {
 // 원하는 슬러그에 한해서 페이지를 미리 만들어 둠.
 export async function generateStaticParams() {
   const posts = await getFeaturedPosts();
-  return posts.map((post) => ({
+  return posts.map((post: Post) => ({
     slug: post.path,
   }));
 }

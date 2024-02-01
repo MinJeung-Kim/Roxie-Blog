@@ -2,6 +2,7 @@ import { Open_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import SWRConfigContext from "@/context/SWRConfigContext";
 
 const sans = Open_Sans({ subsets: ["latin"] });
 
@@ -29,7 +30,9 @@ export default function RootLayout({
       <body className="flex flex-col justify-between w-full h-screen">
         <Header />
         {/* grow : 부모컨테이너를 가득 채움. */}
-        <main className="w-full mx-auto grow max-w-screen-2xl">{children}</main>
+        <main className="w-full mx-auto grow max-w-screen-2xl">
+          <SWRConfigContext>{children}</SWRConfigContext>
+        </main>
         <Footer />
       </body>
     </html>

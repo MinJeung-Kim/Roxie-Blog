@@ -1,11 +1,12 @@
-import { Post } from "@/service/posts";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { Post } from "@/service/posts";
+import { dateFormat } from "@/util/dateFormat";
 
 type Props = { post: Post };
 
 export default function PostCard({
-  post: { title, description, date, category, path },
+  post: { title, description, createdAt, category, path },
 }: Props) {
   const pathUrl = path.split("-")[0];
 
@@ -25,7 +26,7 @@ export default function PostCard({
               ɷ {category}
             </span>
             <time className="text-gray-500 text-[0.85rem]">
-              {date.toString()}
+              {dateFormat(createdAt)}
             </time>
           </div>
           <h3 className="text-base">{title}</h3>
