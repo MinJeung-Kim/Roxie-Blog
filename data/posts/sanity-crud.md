@@ -90,6 +90,14 @@ $ npm install @sanity/client
 ```typescript
 // service/sanity.ts
 import { createClient } from "@sanity/client";
+
+export const client = createClient({
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATASET,
+  useCdn: false,
+  apiVersion: "2024-01-25",
+  token: process.env.SANITY_SECRET_TOKEN,
+});
 ```
 
 `projectId`, `dataset`, `token`은 [sanity manage](https://www.sanity.io/manage/personal/project/sstznhcv)에서 확인 하여 .env파일에 반영 후 재 시작 한다.
