@@ -12,6 +12,15 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        highlight: {
+          "0%, 100%": { backgroundColor: "rgba(229, 231, 235, 1)" }, // bg-gray-200
+          "50%": { backgroundColor: "rgba(229, 231, 235, 0.5)" },
+        },
+      },
+      animation: {
+        highlight: "highlight 1.5s ease-in-out infinite",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
