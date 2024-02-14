@@ -9,5 +9,5 @@
 ## ⚙️개발 환경
  
 - [v1](https://github.com/MinJeung-Kim/Roxie-Blog/wiki/v1) : moc data API, Vercel 배포
-- v2 : sanity GROQ Query 사용, Vercel 배포 (구현 중)
-- v3 : node.js로 backend 구현, aws 배포 (예정)
+- [v2](https://github.com/MinJeung-Kim/Roxie-Blog/wiki/V2) : sanity GROQ Query 사용, Vercel 배포 (구현 중)
+- [v3](https://github.com/MinJeung-Kim/Roxie-Blog/wiki/V3) : node.js로 backend 구현, aws 배포 (예정)
