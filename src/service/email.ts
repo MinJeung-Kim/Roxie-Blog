@@ -25,7 +25,7 @@ export async function sendEmail({ subject, from, message }: EmailData) {
     <h1>${subject}</h1>
     <div>${message}</div>
     <br/>
-    <p>보낸사람: ${from}</p>
+    <span>보낸사람: ${from}</span>
     `,
   };
 

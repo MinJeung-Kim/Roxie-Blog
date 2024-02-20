@@ -50,9 +50,9 @@ export default function PostToc() {
           <li key={heading.id} className={applyPadding(heading.localName)}>
             <a
               href={`#${heading.id}`}
-              className={
-                currentId === heading.id ? "text-yellow-500 text-sm" : "text-sm"
-              }
+              className={`text-[0.85rem] ${
+                currentId === heading.id && "text-yellow-500"
+              }`}
             >
               {heading.textContent}
             </a>

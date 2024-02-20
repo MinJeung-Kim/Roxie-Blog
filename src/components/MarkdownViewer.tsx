@@ -10,7 +10,7 @@ import { coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const DynamicImage = dynamic(() => import("next/image"), { ssr: false });
 const MARKDOWN_CSS =
-  "text-base prose backdrop:max-w-none lg:prose-xl lg:prose-code:text-[0.95rem] lg:prose-a:text-[#abab06] lg:prose-pre:p-3 lg:prose-h2:text-[2rem] lg:prose-h3:text-[1.5rem] lg:prose-p:text-[1rem] lg:prose-li:text-[1rem] lg:prose-span:text-[1rem] lg:prose-th:text-[1rem] lg:prose-td:text-[1rem] lg:prose-ol:mb-0 lg:prose-ul:mt-0";
+  "text-base prose backdrop:max-w-none lg:prose-xl lg:prose-code:text-[0.8rem] lg:prose-a:text-[#abab06] lg:prose-pre:p-3 lg:prose-h2:text-[2rem] lg:prose-h3:text-[1.5rem] lg:prose-p:text-[1rem] lg:prose-li:text-[1rem] lg:prose-span:text-[1rem] lg:prose-th:text-[1rem] lg:prose-td:text-[1rem] lg:prose-ol:mb-0 lg:prose-ul:mt-0";
 
 export default function MarkdownViewer({ content }: { content: string }) {
   return (
@@ -24,7 +24,7 @@ export default function MarkdownViewer({ content }: { content: string }) {
           const match = /language-(\w+)/.exec(className || "");
           return !inline && match ? (
             <>
-              <div className="text-right language-label text-xs font-bold text-[#a3a4a7]">
+              <div className="text-right language-label text-[0.7rem] font-bold text-[#a3a4a7]">
                 {match[1].toUpperCase()}
               </div>
               <SyntaxHighlighter

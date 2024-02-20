@@ -8,13 +8,18 @@ export default defineType({
     defineField({name: 'title', title: 'Title', type: 'string'}),
     defineField({name: 'description', title: 'Description', type: 'string'}),
     defineField({name: 'category', title: 'Category', type: 'string'}),
-    defineField({name: 'path', title: 'Path', type: 'string'}),
-    defineField({name: 'featured', title: 'Featured', type: 'boolean'}),
+    defineField({name: 'content', title: 'Content', type: 'string'}),
+    defineField({
+      title: 'Photo',
+      name: 'photo',
+      type: 'image',
+    }),
   ],
   preview: {
     select: {
       title: 'title',
       subtitle: 'description',
+      media: 'photo',
     },
   },
 })

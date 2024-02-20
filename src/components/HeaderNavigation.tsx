@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import GithubFillIcon from "./icons/GithubFillIcon";
+import PencilIcon from "./icons/PencilIcon";
 
 const NAV_CLASS = "text-sm";
 const NAV_HOVER_CLASS =
@@ -30,12 +31,15 @@ export default function HeaderNavigation() {
         개발자 소개
       </Link>
       <Link
-        href="https://github.com/MinJeung-Kim"
+        href="https://github.com/MinJeung-Kim/Roxie-Blog"
         target="_blank"
         rel="noopener noreferrer"
         className={`text-[1.58rem] ${NAV_HOVER_CLASS}`}
       >
         <GithubFillIcon />
+      </Link>
+      <Link href="/editor" className={`text-[1.58rem] ${NAV_HOVER_CLASS}`}>
+        <PencilIcon />
       </Link>
       {/* <Link href="/contact" className={NAV_CLASS}>
   Contact

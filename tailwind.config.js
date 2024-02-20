@@ -21,6 +21,11 @@ module.exports = {
       animation: {
         highlight: "highlight 1.5s ease-in-out infinite",
       },
+      variants: {
+        extend: {
+          display: ["group-focus"],
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

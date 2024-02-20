@@ -50,10 +50,10 @@ export default function AboutPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p className="flex items-center justify-center underline text-sky-600">
+            <span className="flex items-center justify-center underline text-sky-600">
               바로가기
               <ExportIcon />
-            </p>
+            </span>
           </Link>
         </div>
       </section>

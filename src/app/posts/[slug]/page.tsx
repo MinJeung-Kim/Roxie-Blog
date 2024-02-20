@@ -1,14 +1,13 @@
 import { Metadata } from "next";
 
 import PostToc from "@/components/PostToc";
-import EyeIcon from "@/components/icons/EyeIcon";
 import PostContent from "@/components/PostContent";
-import LikeIcon from "@/components/icons/LikeIcon";
+import PostTocIcons from "@/components/PostTocIcons";
 import AdjacentPostCard from "@/components/AdjacentPostCard";
-import ShareSocialIcon from "@/components/icons/ShareSocialIcon";
 
+import { Post } from "@/model/post";
 import { dateFormat } from "@/util/dateFormat";
-import { Post, getFeaturedPosts, getPostData } from "@/service/posts";
+import { getAllPosts, getPostData } from "@/service/posts";
 
 type Props = {
   params: {
@@ -26,12 +25,9 @@ export async function generateMetadata({
   };
 }
 
-const ICON_CLASS =
-  "hover:text-yellow-500 transition-colors duration-[0.3s] cursor-pointer";
-
 export default async function PostPage({ params: { slug } }: Props) {
   const post = await getPostData(slug);
-  const { next, prev, createdAt, updatedAt } = post;
+  const { next, prev, createdAt, updatedAt, id } = post;
 
   return (
     <div className="flex justify-center pl-8 pr-12">
@@ -44,11 +40,7 @@ export default async function PostPage({ params: { slug } }: Props) {
       </article>
       <article className="min-w-[15rem] mt-[5rem] pt-[3rem] relative">
         <div className="w-[17%] h-full fixed flex flex-col gap-4">
-          <div className="flex items-center justify-between w-[60%] text-[1.5rem]">
-            <LikeIcon className={ICON_CLASS} />
-            <EyeIcon className={ICON_CLASS} />
-            <ShareSocialIcon className={ICON_CLASS} />
-          </div>
+          <PostTocIcons id={id} />
           <div className="flex flex-col gap-1">
             <span className="text-[0.8rem]">
               생성일: {dateFormat(createdAt)}
@@ -70,8 +62,8 @@ export default async function PostPage({ params: { slug } }: Props) {
 
 // 원하는 슬러그에 한해서 페이지를 미리 만들어 둠.
 export async function generateStaticParams() {
-  const posts = await getFeaturedPosts();
+  const posts = await getAllPosts();
   return posts.map((post: Post) => ({
-    slug: post.path,
+    slug: post.id,
   }));
 }

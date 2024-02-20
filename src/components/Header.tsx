@@ -29,9 +29,9 @@ export default function Header() {
           </span>
         </div>
       </Link>
-      <div className="leading-[0.5rem]">
+      {/* <div className="leading-[0.5rem]">
         <TypeItForm />
-      </div>
+      </div> */}
       <HeaderNavigation />
     </header>
   );

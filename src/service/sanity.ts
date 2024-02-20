@@ -9,6 +9,9 @@ export const client = createClient({
   apiVersion: "2024-02-02",
   token: process.env.SANITY_SECRET_TOKEN,
 });
+
+// https://www.sanity.io/docs/image-url
+// npm install --save @sanity/image-url
 const builder = imageUrlBuilder(client);
 
 export function urlFor(source: SanityImageSource) {
