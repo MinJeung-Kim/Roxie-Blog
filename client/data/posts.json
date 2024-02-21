@@ -1,0 +1,130 @@
+[
+  {
+    "title": "Next.js로 나만의 블로그 만들기: CRUD",
+    "description": "데이터베이스에 데이터 추가, 수정, 삭제하기 기능을 구현해보자.",
+    "date": "2024.01.25",
+    "category": "NextJS",
+    "path": "sanity-crud",
+    "featured": true
+  },
+  {
+    "title": "Next.js로 나만의 블로그 만들기: Sanity",
+    "description": "sanity의 주요 특징과 사용방법에 대해 알아보자.",
+    "date": "2024.01.24",
+    "category": "NextJS",
+    "path": "sanity",
+    "featured": true
+  },
+  {
+    "title": "Headless CMS의 기본 개념",
+    "description": "Headless CMS의 기본 개념과 동작방식을 알아보자.",
+    "date": "2024.01.22",
+    "category": "NextJS",
+    "path": "headlessCms",
+    "featured": true
+  },
+  {
+    "title": "단일 연결 리스트를 사용한 stack 자료구조 : 응용편",
+    "description": "객체지향 프로그래밍으로 stack 자료구조를 구현해보자.",
+    "date": "2024.01.19",
+    "category": "Typescript",
+    "path": "typescript-stack-2",
+    "featured": true
+  },
+  {
+    "title": "단일 연결 리스트를 사용한 stack 자료구조 : 기본편",
+    "description": "단일 연결 리스트와 stack 자료구조에대해 알아보자.",
+    "date": "2024.01.19",
+    "category": "Typescript",
+    "path": "typescript-stack-1",
+    "featured": true
+  },
+  {
+    "title": "Next.js로 나만의 블로그 만들기: 목차(TOC) 구현",
+    "description": "Intersection Observer API를 활용한 클릭한 타이틀 부분으로 스크롤 이동하는 기능을 구현해 보자.",
+    "date": "2024.01.15",
+    "category": "NextJS",
+    "path": "nextjs-post-toc",
+    "featured": true
+  },
+  {
+    "title": "Next.js로 나만의 블로그 만들기: 프롤로그",
+    "description": "Next.js 기초부터 실제 배포까지 당신이 알아야 할 모든 것",
+    "date": "2024.01.14",
+    "category": "NextJS",
+    "path": "nextjs-prologue",
+    "featured": true
+  },
+  {
+    "title": "실행 컨텍스트의 구성 요소 - 스코프 체인",
+    "description": "스코프 & 스코프 체인 & OuterEnvironment Reference(외부환경 참조)",
+    "date": "2024.01.13",
+    "category": "JavaScript",
+    "path": "scope",
+    "featured": true
+  },
+  {
+    "title": "실행 컨텍스트란 무엇인가? - 기본 개념 소개",
+    "description": "실행 컨텍스트의 정의와 기본적인 개념과 동작원리에 대해 알아보자.",
+    "date": "2024.01.13",
+    "category": "JavaScript",
+    "path": "execution-context",
+    "featured": true
+  },
+  {
+    "title": "얕은 복사와 깊은 복사",
+    "description": "예제를 통해 얕은 복사와 깊은복사의 차이점을 알아보자.",
+    "date": "2024.01.13",
+    "category": "JavaScript",
+    "path": "javascript-copy",
+    "featured": true
+  },
+  {
+    "title": "Data Types",
+    "description": "데이터 타입에 따라 메모리에 저장되는 원리와 기본 데이터 타입에 대해 알아보자.",
+    "date": "2024.01.10",
+    "category": "JavaScript",
+    "path": "javascript-basic",
+    "featured": true
+  },
+  {
+    "title": "시각화 만들기",
+    "description": "ReactFlow를 사용한 시각화 구현",
+    "date": "2023.09.18",
+    "category": "React",
+    "path": "visualization",
+    "featured": false
+  },
+  {
+    "title": "input object 타입 동적 업데이트",
+    "description": "현업에서 사용하는 object 타입 동적 업데이트",
+    "date": "2023.09.17",
+    "category": "React",
+    "path": "react-useState",
+    "featured": false
+  },
+  {
+    "title": "chat GPT 연동하기",
+    "description": "OpenAI API key발급 받아서 chat GPT 연동",
+    "date": "2023.10.25",
+    "category": "React",
+    "path": "chatGPT-openAI",
+    "featured": false
+  },
+  {
+    "title": "(CI/CD)Github 작업을 사용하여 AWS S3에 React 배포하기(1)",
+    "description": "AWS S3 버킷 생성",
+    "date": "2023.10.26",
+    "category": "AWS",
+    "path": "s3-deploy-reactapp-1",
+    "featured": false
+  },
+  {
+    "title": "(CI/CD)Github 작업을 사용하여 AWS S3에 React 배포하기(2)",
+    "description": "Github Action 설정",
+    "date": "2023.10.26",
+    "category": "AWS",
+    "path": "s3-deploy-reactapp-2",
+    "featured": false
+  }
+]

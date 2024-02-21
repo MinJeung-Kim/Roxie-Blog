@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100vh;
+  overflow-y: auto;
+  font-family: -apple-system, JejuGothic, sans-serif;
+  line-height: 1.95rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #596a8c;
+  border-radius: 20px;
+  border: 3px solid var(--primary);
+}
+
+@font-face {
+  font-family: "JejuGothic";
+  src: url("/fonts/JejuGothic.ttf") format("truetype");
+}
