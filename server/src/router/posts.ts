@@ -23,4 +23,13 @@ router.get("/", (req, res, next) => {
   res.status(200).json(data);
 });
 
+router.get("/:id", (req, res, next) => {
+  const id = req.params.id;
+  const post = posts.find((post) => post.id === id);
+  if (post) {
+    res.status(200).json(post);
+  } else {
+    res.status(404).json({ message: `Post id(${id}) not found` });
+  }
+});
 export default router;
