@@ -31,7 +31,7 @@ var postController = __importStar(require("../controller/posts"));
 var router = express_1.default.Router();
 router.get("/", postController.getPosts);
 router.get("/:id", postController.getPost);
-router.get("/", postController.createPost);
+router.post("/", postController.createPost);
 router.put("/:id", postController.updatePost);
 router.delete("/:id", postController.deletePost);
 exports.default = router;

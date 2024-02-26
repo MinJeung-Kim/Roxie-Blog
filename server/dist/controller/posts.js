@@ -92,7 +92,6 @@ function getPost(req, res) {
                     else {
                         res.status(404).json({ message: "Post id(".concat(id, ") not found") });
                     }
-                    res.status(200).json(post);
                     return [2 /*return*/];
             }
         });
@@ -134,13 +133,19 @@ function updatePost(req, res) {
 exports.updatePost = updatePost;
 function deletePost(req, res) {
     return __awaiter(this, void 0, void 0, function () {
-        var postId;
+        var postId, post;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     postId = req.params.id;
-                    return [4 /*yield*/, postsRepository.remove(postId)];
+                    return [4 /*yield*/, postsRepository.getById(postId)];
                 case 1:
+                    post = _a.sent();
+                    if (!post) {
+                        res.status(404).json({ message: "Post not found: ".concat(postId) });
+                    }
+                    return [4 /*yield*/, postsRepository.remove(postId)];
+                case 2:
                     _a.sent();
                     res.status(204);
                     return [2 /*return*/];
