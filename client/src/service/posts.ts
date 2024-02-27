@@ -1,19 +1,14 @@
+import HttpClient from "@/network/http";
+
 export default class PostService {
-  constructor(private baseURL: string) {
-    this.baseURL = baseURL;
+  constructor(public http: HttpClient) {
+    this.http = http;
   }
 
   async getPosts() {
-    const response = await fetch(`${this.baseURL}/posts`, {
+    return this.http.fetch(`/posts`, {
       method: "GET",
-      headers: { "Content-Type": "application/json" },
     });
-    const data = await response.json();
-    if (response.status !== 200) {
-      throw new Error(data.message);
-    }
-
-    return data;
   }
 
   async postPost(update: {
@@ -23,28 +18,18 @@ export default class PostService {
     content: string;
     image: string;
   }) {
-    const response = await fetch(`${this.baseURL}/posts`, {
+    return this.http.fetch(`/posts`, {
       method: "POST",
       body: JSON.stringify({
         ...update,
       }),
     });
-    const data = await response.json();
-    if (response.status !== 201) {
-      throw new Error(data.message);
-    }
-
-    return data;
   }
 
   async deletePosts(postId: string) {
-    const response = await fetch(`${this.baseURL}/posts/${postId}`, {
+    return this.http.fetch(`/posts/${postId}`, {
       method: "DELETE",
-      headers: { "Content-Type": "application/json" },
     });
-    if (response.status !== 204) {
-      throw new Error(`Post postId(${postId}) not found`);
-    }
   }
 
   async updatePost(
@@ -57,17 +42,11 @@ export default class PostService {
       image: string;
     }
   ) {
-    const response = await fetch(`${this.baseURL}/posts/${postId}`, {
+    return this.http.fetch(`/posts/${postId}`, {
       method: "PUT",
       body: JSON.stringify({
         ...update,
       }),
     });
-    const data = await response.json();
-    if (response.status !== 200) {
-      throw new Error(data.message);
-    }
-
-    return data;
   }
 }
